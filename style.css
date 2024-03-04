@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.header {
+  width: 100%;
+  background-color: #e1ede6;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0px auto;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-items: center;
+}
+
+.header__logo {
+  flex: 0 0 140px;
+  position: relative;
+  z-index: 3;
+  margin-left: 90px;
+}
+
+.header__logo img {
+  max-width: 100%;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__list li {
+  margin-left: 60px;
+}
+
+.header__link {
+  color: #2c2d35;
+  font-size: 1.25rem;
+  letter-spacing: -1px;
+  transition: all 0.3s;
+}
+
+.header__link svg {
+  stroke: #2c2d35;
+  transition: all 0.3s;
+}
+
+.header__link:hover {
+  color: #598d66;
+}
+
+.header__link svg:hover {
+  stroke: #598d66;
+}
+
+.header-phone-logo a {
+  display: none;
+}
+
+/**/
+.container_2 {
+  max-width: 80%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block1,
+.block2 {
+  flex: 0 1 50%;
+}
+
+.block1 img {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 3.75rem;
+  color: #2c2d35;
+  font-weight: 500;
+}
+
+.title span {
+  color: #598d66;
+}
+
+.subtitle {
+  color: #86928b;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.btn {
+  border: 1px solid #598d66;
+  padding: 20px 60px;
+  background-color: transparent;
+  color: #598d66;
+  font-size: 1.25rem;
+  transition: all 0.3s;
+  margin-top: 60px;
+}
+
+.btn:hover {
+  background-color: #598d66;
+  color: #fff;
+}
+
+/**/
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog_top {
+  padding-top: 70px;
+}
+
+.catalog__title {
+}
+
+.heading {
+  color: #2c2d35;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.catalog__list {
+  display: flex;
+}
+
+.catalog__item {
+}
+
+.catalog__btn {
+  background-color: #d4e8d9;
+  border: none;
+  padding: 10px 20px;
+  color: #2c2d35;
+  font-size: 1.25rem;
+  border-radius: 20px;
+  margin-left: 32px;
+  transition: all 0.2s ease-in-out;
+}
+
+.catalog__btn_active {
+  background-color: #376b44;
+  color: #f4f6f5;
+}
+
+.catalog-content {
+}
+
+.catalog-content__item {
+  display: none;
+}
+
+.catalog-content__item_active {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-content__card {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: #e1ede6;
+  padding: 20px;
+  margin-top: 30px;
+}
+.catalog-content__img {
+}
+
+.catalog-content__author {
+  color: #86928b;
+  font-size: 1.1rem;
+  margin: 20px 0 10px 0;
+}
+
+.catalog-content__name {
+  color: #2c2d35;
+  font-size: 1.87rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.catalog-content__props {
+  color: #2c2d35;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.catalog-content__price {
+  color: #598d66;
+  font-size: 1.5rem;
+}
+
+.catalog-content__btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media all and (max-width: 1050px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .header__logo {
+    margin-left: 5px;
+  }
+
+  .block1 {
+    flex: 1 0 45%;
+  }
+
+  .block1 img {
+    max-width: 100%;
+  }
+
+  .block2 {
+    flex: 0 1 55%;
+    padding-top: 30px;
+  }
+
+  .row {
+    justify-content: space-evenly;
+  }
+}
+
+@media all and (max-width: 813px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+
+  /* .block2 {
+    flex: 0 1 45%;
+  } */
+}
+
+@media all and (max-width: 670px) {
+  body.lock {
+    overflow: hidden; /*чтобы контент при открытом меню не прокручивался*/
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .header__body {
+    height: 130px;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__phone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-phone-logo {
+    background-color: #e1ede6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+  }
+
+  hr {
+    background-color: #86928b;
+    width: 90%;
+    align-self: center;
+    height: 1px;
+    border: none;
+  }
+
+  .header-phone-logo a {
+    display: block;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin: 20px 20px;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #4c5866;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before,
+  .header__burger:after {
+    content: "";
+    background-color: #4c5866;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before {
+    top: 0;
+  }
+
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 128px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #e1ede6;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+
+  .header__menu.active {
+    top: 128px;
+    left: 0;
+  }
+
+  .header__list {
+    display: block;
+  }
+
+  .header__list li {
+    margin: 30px 0 50px 20px;
+  }
+
+  .block1 {
+    flex: 0 1 45%;
+  }
+
+  .block1 img {
+    max-width: 70%;
+  }
+
+  .block2 {
+    flex: 0 1 45%;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .header-phone-logo {
+    background-color: white;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .block1 {
+    display: none;
+  }
+
+  .block2 {
+    flex: 0 1 90%;
+  }
+
+  .title {
+    font-size: 1.87rem;
+  }
+
+  .subtitle {
+    font-size: 0.87rem;
+  }
+
+  .catalog__list {
+    overflow-x: auto;
+  }
+}

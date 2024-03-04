@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reproduction</title>
+    <link rel="shortcut icon" href="img/Star 1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="#" class="header__logo">
+            <img src="img/svg/logo.svg" alt="" />
+          </a>
+
+          <div class="header__phone">
+            <div class="header-phone-logo">
+              <a href="#">
+                <img src="img/svg/logo.svg" alt="" />
+              </a>
+            </div>
+            <hr />
+
+            <div class="header__burger">
+              <span></span>
+            </div>
+          </div>
+
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li>
+                <a href="" class="header__link">Репродукции</a>
+              </li>
+
+              <li>
+                <a href="" class="header__link">Новинки</a>
+              </li>
+
+              <li>
+                <a href="" class="header__link">О нас</a>
+              </li>
+
+              <li>
+                <a href="" class="header__link header__logo_2"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_3_996)">
+                      <path
+                        d="M9.25001 21.1667C9.75627 21.1667 10.1667 20.7563 10.1667 20.25C10.1667 19.7438 9.75627 19.3334 9.25001 19.3334C8.74375 19.3334 8.33334 19.7438 8.33334 20.25C8.33334 20.7563 8.74375 21.1667 9.25001 21.1667Z"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M19.3333 21.1667C19.8396 21.1667 20.25 20.7563 20.25 20.25C20.25 19.7438 19.8396 19.3334 19.3333 19.3334C18.8271 19.3334 18.4167 19.7438 18.4167 20.25C18.4167 20.7563 18.8271 21.1667 19.3333 21.1667Z"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M1.91666 1.91663H5.58332L8.03999 14.1908C8.12381 14.6128 8.35341 14.9919 8.68857 15.2617C9.02374 15.5315 9.44313 15.6749 9.87332 15.6666H18.7833C19.2135 15.6749 19.6329 15.5315 19.9681 15.2617C20.3032 14.9919 20.5328 14.6128 20.6167 14.1908L22.0833 6.49996H6.49999"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3_996">
+                        <rect
+                          width="22"
+                          height="22"
+                          fill="white"
+                          transform="translate(1 1)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="container container_2">
+      <div class="wrapper">
+        <div class="block1">
+          <img src="img/main.png" alt="" />
+        </div>
+
+        <div class="block2">
+          <h1 class="title">Реплики картин от <span>Ink. House</span></h1>
+          <p class="subtitle">
+            Высокое качество отрисовки на плотной бумаге или льняном холсте.
+            Редкие произведения, доступные цены.
+          </p>
+          <button class="btn">Продукция</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="catalog catalog_top">
+        <h3 class="catalog__title heading">Репродукции</h3>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <button
+              class="catalog__btn catalog__btn_active"
+              data-country="France"
+            >
+              Франция
+            </button>
+          </li>
+          <li class="catalog__item">
+            <button class="catalog__btn" data-country="Germany">
+              Германия
+            </button>
+          </li>
+          <li class="catalog__item">
+            <button class="catalog__btn" data-country="England">Англия</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog-content">
+        <!-- <div
+          class="catalog-content__item catalog-content__item_active"
+          data-country="France"
+        > -->
+        <div class="row"></div>
+          <!-- <div class="row">
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/1phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/1mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/1tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/1desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Марсель Руссо</p>
+              <h3 class="catalog-content__name">Охота Амура</h3>
+              <p class="catalog-content__props">Холст, масло (50х80)</p>
+              <p class="catalog-content__price">14 500 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/2phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/2mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/2tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/2desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Анри Селин</p>
+              <h3 class="catalog-content__name">Дама с собачкой</h3>
+              <p class="catalog-content__props">Акрил, бумага (50х80)</p>
+              <p class="catalog-content__price">16 500 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/3phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/3mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/3tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/3desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Франсуа Дюпон</p>
+              <h3 class="catalog-content__name">Процедура</h3>
+              <p class="catalog-content__props">Цветная литография (40х60)</p>
+              <p class="catalog-content__price">20 000 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/4phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/4mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/4tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/4desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Луи Детуш</p>
+              <h3 class="catalog-content__name">Роза</h3>
+              <p class="catalog-content__props">Бумага, акрил (50х80)</p>
+              <p class="catalog-content__price">12 000 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/2phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/2mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/2tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/2desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Анри Селин</p>
+              <h3 class="catalog-content__name">Дама с собачкой</h3>
+              <p class="catalog-content__props">Акрил, бумага (50х80)</p>
+              <p class="catalog-content__price">16 500 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+
+            <div class="catalog-content__card">
+              <picture class="catalog-content__img">
+                <source
+                  srcset="img/pictures/3phone.jpg"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="img/pictures/3mini.jpg"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="img/pictures/3tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <img src="img/pictures/3desk.jpg" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">Франсуа Дюпон</p>
+              <h3 class="catalog-content__name">Процедура</h3>
+              <p class="catalog-content__props">Цветная литография (40х60)</p>
+              <p class="catalog-content__price">20 000 руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+            </div>
+          </div> -->
+        </div>
+        <div class="catalog-content__item" data-country="Germany">
+          Германия Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Fugit adipisci velit, voluptate sed, nesciunt commodi quisquam ullam,
+          eveniet modi tempore dicta voluptas maxime? Excepturi itaque dolores
+          recusandae laboriosam ab laudantium!
+        </div>
+        <div class="catalog-content__item" data-country="England">
+          Англя Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+          impedit exercitationem ut modi. Ipsum sed consequuntur placeat,
+          obcaecati blanditiis aliquid hic velit fugit, aperiam, quo expedita
+          doloribus explicabo. Dolorum, laudantium.
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
