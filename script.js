@@ -1,3 +1,5 @@
+import { pictures } from "./info.js";
+
 const headerBurger = document.querySelector(".header__burger");
 const headerMenu = document.querySelector(".header__menu");
 
@@ -13,15 +15,15 @@ const links = document.querySelectorAll(".catalog__btn");
 //const content = document.querySelectorAll(".catalog-content__item");
 const content = document.querySelector(".row");
 
-// function changeContentClasses(country) {
-//   content.forEach((el) => {
-//     if (el.dataset.country == country) {
-//       el.classList.add("catalog-content__item_active");
-//     } else {
-//       el.classList.remove("catalog-content__item_active");
-//     }
-//   });
-// }
+function changeContentClasses(country) {
+  content.forEach((el) => {
+    if (el.dataset.country == country) {
+      el.classList.add("catalog-content__item_active");
+    } else {
+      el.classList.remove("catalog-content__item_active");
+    }
+  });
+}
 
 links.forEach((el) => {
   el.addEventListener("click", (e) => {
@@ -33,8 +35,9 @@ links.forEach((el) => {
 
     e.currentTarget.classList.add("catalog__btn_active");
 
-    // changeContentClasses(country);
-    foo(country);
+    //changeContentClasses(country);
+    // foo(country);
+    showPictures(country)
   });
 });
 
@@ -43,8 +46,42 @@ async function foo(country) {
   const f = await fetch("db.json");
   const res = await f.json();
 
+  // const f = await fetch("http://localhost:3000/pictures");
+  // const res = await f.json();
+
+  // for (let el of res) {
+  //   if (el.country === country) {
+  //     content.innerHTML += `
+  //     <div class="catalog-content__card">
+  //       <picture class="catalog-content__img">
+  //               <source
+  //                 srcset="${el.cover.mobile}"
+  //                 media="(max-width: 480px)"
+  //               />
+  //               <source
+  //                 srcset="${el.cover.mini}"
+  //                 media="(max-width: 700px)"
+  //               />
+  //               <source
+  //                 srcset="${el.cover.tablet}"
+  //                 media="(max-width: 768px)"
+  //               />
+  //               <img src="${el.cover.desktop}" alt="картина" />
+  //             </picture>
+  //             <p class="catalog-content__author">${el.author}</p>
+  //             <h3 class="catalog-content__name">${el.title}</h3>
+  //             <p class="catalog-content__props">${el.props}</p>
+  //             <p class="catalog-content__price">${el.price.toLocaleString(
+  //               "ru-RU"
+  //             )} руб</p>
+  //             <button class="btn catalog-content__btn">В корзину</button>
+  //         </div>
+  //       `;
+  //   }
+  // }
+
   for (let el in res) {
-    if(res[el].country == country) {
+    if (res[el].country == country) {
       content.innerHTML += `
       <div class="catalog-content__card">
         <picture class="catalog-content__img">
@@ -65,7 +102,9 @@ async function foo(country) {
               <p class="catalog-content__author">${res[el].author}</p>
               <h3 class="catalog-content__name">${res[el].title}</h3>
               <p class="catalog-content__props">${res[el].props}</p>
-              <p class="catalog-content__price">${res[el].price.toLocaleString('ru-RU')} руб</p>
+              <p class="catalog-content__price">${res[el].price.toLocaleString(
+                "ru-RU"
+              )} руб</p>
               <button class="btn catalog-content__btn">В корзину</button>
           </div>
         `;
@@ -73,8 +112,42 @@ async function foo(country) {
   }
 }
 
-foo("France");
+//foo("France");
 
 
 
+function showPictures(country) {
+  content.innerHTML = "";
+  for(let el of pictures) {
+    if(el.country == country) {
+      content.innerHTML += `
+      <div class="catalog-content__card">
+        <picture class="catalog-content__img">
+                <source
+                  srcset="${el.cover.mobile}"
+                  media="(max-width: 480px)"
+                />
+                <source
+                  srcset="${el.cover.mini}"
+                  media="(max-width: 700px)"
+                />
+                <source
+                  srcset="${el.cover.tablet}"
+                  media="(max-width: 768px)"
+                />
+                <img src="${el.cover.desktop}" alt="картина" />
+              </picture>
+              <p class="catalog-content__author">${el.author}</p>
+              <h3 class="catalog-content__name">${el.title}</h3>
+              <p class="catalog-content__props">${el.props}</p>
+              <p class="catalog-content__price">${el.price.toLocaleString(
+                "ru-RU"
+              )} руб</p>
+              <button class="btn catalog-content__btn">В корзину</button>
+          </div>
+        `;
+    }
+  }
+}
 
+showPictures("France")
